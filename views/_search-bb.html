@@ -1,0 +1,46 @@
+<!-- This is a fork of the bootstrap typeahead
+Reference:
+https://gist.github.com/1866577
+https://github.com/thorst/Bootstrap-Typeahead-Fork
+-->
+<script type="text/javascript" src="/js/bootstrap-typeahead-dynamic.js"></script>
+<script type="text/javascript" src="/js/libs/underscore-min.js"></script>
+<script type="text/javascript" src="/js/libs/backbone-min.js"></script>
+<script type="text/javascript">
+
+SearchView = Backbone.View.extend({
+
+el: $('#search'),
+
+initialize: function(){
+	this.el.find('#typeahead').typeahead({
+	       /*source: function(typeahead,query){
+	       $.ajax({
+		       url: '/search'
+		       ,type: 'POST'
+		       ,data: 'query=' + query
+		       ,dataType: 'JSON'
+		       ,async: false
+		       ,success: function(data){
+			       typeahead.process(data);
+		       }
+	       });
+	       }*/     
+		source: ['Google','Yahoo','Linkedin','Facebook']
+	});
+	
+},
+
+events: {
+	'submit': 'submit',
+},
+
+submit : function(e){
+	console.log("Form submitted " + this);
+	e.preventDefault();
+}
+});
+
+var searchview = new SearchView();
+
+</script>

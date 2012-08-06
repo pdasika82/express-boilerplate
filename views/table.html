@@ -1,0 +1,18 @@
+{{> _boiler-head-start}}
+<link rel="stylesheet" href="/css/table/pager.css">
+{{> _boiler-head-end}}
+{{> _top-nav-unsigned}}
+<div class="container">
+<div class="content">
+{{> _table}}
+</div>
+{{> _footer}}
+</div>
+{{> _boiler-jquery}}
+<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script> 
+<script type="text/javascript">
+  $(function() {
+    $("table#sortTableExample").tablesorter({ sortList: [[0,0]] });
+  });
+</script> 
+{{> _boiler-bottom}}

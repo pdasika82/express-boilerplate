@@ -1,0 +1,19 @@
+<script type="text/javascript" src="/js/hogan.js"></script>
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+/*$('#answer').click(function(){
+    $('#fileupload').attr('action','/newanswer');
+    $('#fileupload').trigger('submit');
+});
+*/
+</script>
+

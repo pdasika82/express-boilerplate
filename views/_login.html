@@ -1,0 +1,31 @@
+	<div class="hero-unit span9">
+			<div class="span4" style="border-right-style:inset;">
+				<form class="form" action="/login" method="POST">
+					<input name="email" type="email" class="input" placeholder="E-mail">
+					<input name="password" type="password" class="input" placeholder="Password">
+	  				<input type="hidden" name="_csrf" value="{{csrfToken}}">
+					{{#flash.error}}
+					<div class="alert alert-error">
+						{{.}}
+					</div>
+					{{/flash.error}}
+
+					<label class="checkbox">
+						<input type="checkbox">
+						Remember me </label>
+					<button type="submit" class="btn btn-success">
+					Login	
+					</button>
+					<br/>
+					<br/>
+					<a href="/forgot">
+						Forgot password?	
+					</a>
+					<br/>
+					<br/>
+					<a href="/signup">
+						New User? Create an account now! 
+					</a>
+				</form>
+			</div>
+		</div>

@@ -1,0 +1,21 @@
+<script type="text/javascript" src="/js/bootstrap-typeahead-dynamic.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$('#typeahead').typeahead({
+	/*source: function(typeahead,query){
+	$.ajax({
+		url: '/search'
+		,type: 'POST'
+		,data: 'query=' + query
+		,dataType: 'JSON'
+		,async: false
+		,success: function(data){
+			typeahead.process(data);
+		}
+	});
+	}*/	
+	source: ['Google','Yahoo','Linkedin','Facebook']
+	});
+})
+</script>

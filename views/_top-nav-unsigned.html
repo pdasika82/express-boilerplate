@@ -1,0 +1,26 @@
+<!-- Top navigation bar unsigned
+========================================================================-->
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="qlogo" href="/">CompanyName </a>
+			<div class="nav-collapse">
+          		<form class="navbar-search pull-left" id="search">
+				<input type="text" class="input-large span4" placeholder="Search" id="typeahead" data-provider="typeahead" autocomplete="off">
+	    			<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	 		</form>
+			<div class="nav pull-right">
+			{{^username}}
+			<a class="btn btn-success" data-toggle="modal" href="/login">Login</a>
+			{{/username}}
+			{{#username}}
+			<text>Hi {{username}} !</text>
+			<button type="submit" class="btn btn-info" onClick="location.href='/logout'">
+				Logout	
+			</button>
+			{{/username}}
+			</div>	
+			</div>
+		</div>
+	</div>
+</div>
