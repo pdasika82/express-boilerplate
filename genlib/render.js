@@ -64,7 +64,7 @@ module.exports = {
 		setDynamicHelpers(req, res, params);
 		res.render('error', {
 			locals: {
-				title: 'qtoti home',
+				title: 'company home',
 				msg: err.msg,
 				status: err.code
 			},
