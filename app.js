@@ -118,9 +118,6 @@ app.configure('development', 'test', function() {
 	}));
 });
 
-app.configure('production', function() {
-	return app.use(express.errorHandler());
-});
 
 var router = require('./routes.js');
 router.route(app, passport);

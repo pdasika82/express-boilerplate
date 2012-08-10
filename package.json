@@ -1,7 +1,7 @@
 {
   "name": "express-boilerplate",
   "description": "Boilerplate code for MVC apps",
-  "author": "Pranil Dasika <pranildasika@ahobalam.com>",
+  "author": "Pranil Dasika", 
   "version": "0.0.1",
   "dependencies": {
 	"mustache" : "0.4.0",
